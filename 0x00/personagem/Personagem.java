@@ -25,7 +25,7 @@ public abstract class Personagem {
 
         return "Personagem {" +
                 " nome = " + nome +
-                ", tipoPersonagem = " + tipoPersonagem +
+                ", tipo = " + tipoPersonagem +
                 ", inteligencia = " + inteligencia +
                 ", forca = " + forca +
                 ", vigor = " + vigor +
