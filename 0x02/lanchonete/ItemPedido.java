@@ -25,8 +25,8 @@ public class ItemPedido {
         int hash = 7;
         int primo = 31;
 
-        hash = hash * primo + (tipo == null ? 0 : tipo.hashCode());
         hash = hash * primo + (nome == null ? 0 : nome.hashCode());
+        hash = hash * primo + (tipo == null ? 0 : tipo.hashCode());
 
         return hash;
     }
