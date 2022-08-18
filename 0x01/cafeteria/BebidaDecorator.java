@@ -1,19 +1,19 @@
 import java.util.List;
 
 public class BebidaDecorator extends Bebida {
-    protected Bebida bebidaDecorada;
+    protected Bebida bebidaDecorator;
 
     public BebidaDecorator(Bebida bebidaDecorada) {
-        this.bebidaDecorada = bebidaDecorada;
+        this.bebidaDecorator = bebidaDecorada;
     }
 
     @Override
     public List<String> obterIngredientes() {
-        return bebidaDecorada.obterIngredientes();
+        return bebidaDecorator.obterIngredientes();
     }
 
     @Override
     public double obterPreco() {
-        return bebidaDecorada.obterPreco();
+        return bebidaDecorator.obterPreco();
     }
 }
