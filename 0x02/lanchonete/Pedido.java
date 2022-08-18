@@ -35,10 +35,10 @@ public class Pedido {
     public String toString() {
         StringBuilder sb = new StringBuilder();
 
-        sb.append("\tFora da caixa:\n");
+        sb.append("\tFora da Caixa:\n");
         sb.append(listarItens(itensForaCaixa));
 
-        sb.append("\tDentro da caixa:\n");
+        sb.append("\tDentro da Caixa:\n");
         sb.append(listarItens(itensDentroCaixa));
 
         return sb.toString();
