@@ -1,5 +1,9 @@
+import java.util.Locale;
+
 public class Program {
     public static void main(String[] args) {
+        Locale.setDefault(new Locale("pt", "br"));
+
         PedidoBuilder builder1 = new PedidoBuilder();
 
         builder1.setBatata(TamanhoBatata.GRANDE);
