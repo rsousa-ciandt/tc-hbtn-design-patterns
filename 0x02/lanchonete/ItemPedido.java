@@ -20,16 +20,10 @@ public class ItemPedido {
         return Objects.equals(nome, itemPedido.nome) && tipo == itemPedido.tipo;
     }
 
-//    @Override
-//    public int hashCode() {
-//        int hash = 7;
-//        int primo = 31;
-//
-//        hash = hash * primo + (nome == null ? 0 : nome.hashCode());
-//        hash = hash * primo + (tipo == null ? 0 : tipo.hashCode());
-//
-//        return hash;
-//    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(tipo.toString().charAt(0), nome.charAt(0));
+    }
 
     public String getNome() {
         return nome;
