@@ -1,0 +1,19 @@
+O que é Arquitetura Hexagonal e por quem ela foi criada ?
+
+Criada port Alistair Cockburn e também conhecida por arquitetura de portas e adaptadores, o objetivo de isolar do software o que são regras de negócio e o que são as tecnologias usadas, visando um baixo grau de acoplamento, independência de tecnologia e facilidade na criação de testes.
+
+Sendo direto e objetivo, temos dois hexágonos: interno que é dedicado ao negócio do software e externo que é dedicado a infra estrutura tecnológica. O hexágono interno só tem dependência de sua linguagem e nada mais, enquanto o externo faz a todo momento menções ao domínio do sistema.     
+A comunicação desses dois hexágonos são feitas através de portas (interfaces) e adaptadores (implementações), que viabiliza o fluxo de dentro pra fora e vice-versa. Temos o conceito de portas e adaptadores primários e secundários: os primários são quem recebe chamadas do mundo externo e fazem comunicação com o domínio, já o outro é quem recebe chamadas do interior para se comunicar com outros serviços (banco de dados, etc)
+
+Quais são os benefícios e recursos que Arquitetura Hexagonal fornece?
+
+- baixo acoplamento: uma vez que temos bem definido classes, interfaces e um isolamento das tecnologias, temos um sistema menos acoplado e mais coeso;
+- isolamento tecnológico: como nossa regra de negócio é totalmente segregada, podemos ficar despreocupados em relação à tecnologia que estamos usando, podendo ser trocada  em qualquer momento (claro que não é algo muito comum e trivial, principalmente em sistemas complexos)
+
+Quais as diferenças entre Arquitetura Hexagonal e Clean Architecture ?
+
+A Clean Architecture é quase uma derivação da Hexagonal, com exceção de que não menciona a maneira como as camadas se comunicam, apenas diz que tem suas responsabilidades bem definidas. Já na Hexagonal temos a definição do uso de portas e adaptadores como meio de comunicação entre as camadas do sistema!
+
+Na sua opinião, a Arquitetura Hexagonal pode ser utilizada em qualquer tipo de projeto ? Quais informações devem ser consideradas antes de desenvolver sistemas usando esse padrão de projeto ?
+
+Definitivamente não: a complexidade dessa arquitetura não é muito trivial de aplicar em qualquer sistema, principalmente os pequenos e que não tem tanta expectativa de crescimento. Nessa arquitetura não temos definido a maneira como iremos organizar as camadas, também a quantidade de classes e interfaces a serem criadas é demasiada para fazer coisas simples.
